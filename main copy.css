@@ -1,0 +1,1090 @@
+    * {
+        box-sizing: border-box;
+        /*универсальное св-во позволяет для всех элементов устанавливать границы*/
+    }
+
+    html {
+        width: 100%;
+        height: 100%;
+    }
+
+    body {
+        font-family: Open Sans, Helvetica, sans-serif;
+        /*шрифты из fonts google*/
+        color: #fff;
+        font-size: 16px;
+        /* цвет всей стр - его основа */
+        background: #001821;
+        /*размер текстового содержимого блоков*/
+        line-height: 1.42;
+        /*интерлиньяж-межстрочный интервал.DevTools говориL:*/
+        -webkit-font-smoothing: antialiased;
+        /*сглаживание шрифтов*/
+        font-weight: 400;
+        margin: 0px;
+    }
+
+    .main-page-wrapper {
+        background: url("./photo/elephant.png") center top no-repeat, url("./photo/tourist.png") center bottom no-repeat;
+    }
+
+    a {
+        color: inherit;
+        /*цвет ссылок от блока в котором они находятся*/
+    }
+
+    .container {
+        width: 1141px;
+        margin: 0 auto;
+        /*центруем*/
+    }
+
+    button {
+        cursor: pointer;
+    }
+/* Допкласс */
+    .workbox {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+ 
+    .header .container{
+        padding-top: 30px;
+        min-height: 123px;
+        margin-bottom: 69px;
+        -webkit-box-pack: justify;
+    } 
+
+    .header__col {
+        display: flex;
+        align-items: center;
+    }
+
+
+    .header__col {
+        display: flex;
+        align-items: flex-start;
+        margin-top: 28px;
+    }
+
+    .header__col--align--right {
+        justify-content: flex-end;
+    }
+
+    
+    ul {
+        /*убрал точки*/
+        padding: 0;
+        margin: 0;
+    }
+
+    ul li {
+        /*есть ul, где есть нумерованные списки, у которых не надо убирать стили*/
+        list-style: none;
+    }
+
+
+    .logo {
+        height: 36px;
+        width: 85px;
+        display: block;
+        margin-right: 79px;
+    }
+
+    .logo__pic {
+        height: 100%;
+        width: 100%;
+    }
+
+
+    .menu__list {
+        display: flex;
+    }
+
+    .contacts {
+        text-align: right;
+        size: 26px;
+        font-style: normal;
+        letter-spacing: .02em;
+    }
+
+    .contacts__title {
+        font-size: 13px;
+        color: #1E1F20;
+    }
+
+    .contacts__pop {
+        right: 0;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        background: url(./drawings/rectangle.png) bottom right / cover no-repeat;
+        min-height: 80px;
+        min-width: 165px;
+        position: absolute;
+        display: none;
+    }
+
+
+
+    .contacts {
+        position: relative;
+    }
+
+    .contacts:hover .contacts__pop {
+        display: flex;
+    }
+
+ 
+/*!!!!!!!!!!!пытаюсь сделать всплывающее окно!!!!!!  */
+    /*.contacts__pop {
+        opacity: 0;
+        animation: pop-up 1s ease-in;
+        animation-fill-mode: backwards;
+    }
+
+    .contacts__graf:hover { 
+    content: attr(pop-up);
+    background: element(contacts contacts--up);
+
+}
+    
+    @keyframes pop-up {
+        from {
+            transform: scale(1);
+        }
+    
+    
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+    .menu__item {
+        display: inline-block;
+        /*делаем строчными*/
+        vertical-align: middle;
+        /*размещаем по центру*/
+        margin-right: 54px;
+    }
+
+    .menu__title {
+        font-size: 14px;
+        transition: 0.4s
+    }
+
+    .menu__title:hover {
+        /*изменение цвета при наведении курсора*/
+        color: rgb(228, 154, 154);
+    }
+/*модификатор на цвет активного окна*/
+    .menu__item--active .menu__title {
+        color: red;
+    }
+
+    .menu__item:last-child {
+        /*DevTools говорит: недопустимое значение свойства..?
+        Надо писать ноль0, не букву О,
+        поэтому CSS Formater и не помог*/
+        margin: 0px;
+    }
+
+    a.contacts__phone {
+        display: block;
+        font-size: 26px;
+        margin-bottom: -8px;
+    }
+
+    .contacts__graf {
+        font-size: 13px;
+        /*подчёркивание*/
+        text-decoration: underline;
+    }
+
+    .tour {
+        width: 100%;
+        /*межбуквенный интервал*/
+        padding-top: 28px;
+        margin-bottom: 253px;
+    }
+
+    .tour__image-title {
+        width: 50%;
+        font-size: 72px;
+        font-weight: 700;
+        /* устанавливаем величину пространства 
+        между строками */
+        padding-bottom: 20px;
+    }
+
+    .tour__appeal {
+        font-size: 18px;
+        /*Устанавливает насыщенность шрифта*/
+        font-weight: 400;
+        margin-bottom: 31px;
+        /*корректировка межбуквенного интервала*/
+        letter-spacing: .01em;
+    }
+
+
+    .travel {
+        margin-bottom: 127px;
+    }
+
+    .travel__img {
+        height: 144px;
+    }
+
+    p {
+        margin: 0;
+        font-size: 14px;
+    }
+
+    h1, h2, h3 {
+        margin: 0;
+        font-weight: normal;
+    }
+
+    h2 {
+        font-size: 36px;
+        font-weight: 700;
+    }
+
+    a {
+        text-decoration: none;
+        /* убрали подчёркивание */
+    }
+    
+    .button {
+        background-color: red;
+        /*цвет должен быть таким-F5170E.Но он не встаёт и DevTools говорит:
+        недопустимое значение свойства*/
+        height: 55px;
+        width: 168px;
+        border-radius: 35px;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 700;
+        /*преобразование текста элемента в прописной*/
+        text-transform: uppercase;
+        border: none;
+        box-shadow: 0 0 15px 0 #c96a6a;
+        outline: none;
+        transition: 0.4s;
+    }
+    
+    .button:hover {
+        background-color: #c96a6a;
+        /*кнопка меняет цвет при наведении на нее курсора мыши*/
+    }
+    
+    
+        .travel__button {
+            width: 135px;
+            text-align: center;
+            display: flex;
+            justify-content: flex-start;
+            margin-top: auto;
+        }
+    
+
+    .travel__title {
+        font-size: 36px;
+        font-weight: 700;
+        /*корректировка межбуквенного интервала*/
+        letter-spacing: .015em;
+        margin-bottom: 51px;
+    }
+    
+    .travel__subtitle {
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    .travel__features {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 10px;
+    }
+    
+    
+    .travel__list {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .travel__item {
+        width: calc(100% / 3 - 18px);
+        border-radius: 5px;
+        overflow: hidden;
+        /*Свойство overflow-x управляет отображением содержания блочного элемента по горизонтали,
+         если контент целиком не помещается и выходит за область справа или слева от блока.
+         hidden - Отображается только область внутри элемента, остальное будет скрыто.*/
+    }
+
+    .travel__item:last-child {
+        /*действие в отношении ребёнка*/
+        margin: 0px;
+    }
+
+    .travel__item__img {
+        height: 144px;
+    }
+
+
+
+
+
+
+    .travel__content {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        padding: 33px 22px 26px;
+        background: #fff;
+        color: rgba(48, 48, 48, 1);
+        margin-top: -5px;
+        min-height: 305px;
+    }
+
+    .travel__features-blok {
+        display: inline-block;
+        padding: 6px;
+        width: 132px;
+        /*Ну, тут тоже вопрос насколько я правильно сделал?*/
+    }
+
+    .travel__features-text {
+        padding-top: 23.5px;
+        padding-bottom: 24.5px;
+    }
+
+
+    .news__title {
+        margin-bottom: 51px;
+    }
+
+    .news__item {
+        display: inline-block;
+        /*из блочного в строчный*/
+        position: relative;
+        /*для текста поверх картинки!*/
+        margin-right: 20px;
+        border-radius: 5px;
+        overflow: hidden;
+        /* margin-bottom: 43px; */
+    }
+
+    /*last-child находит любой элемент, 
+    являющийся последним в его родителе.*/
+
+    .news__item:last-child {
+        margin-right: 0px;
+    }
+
+    .news__img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        /*Свойство oobject-fit может сохранять исходные пропорции элемента или наоборот, искажать пропорции, в угоду соблюдения размеров
+        Элемент увеличивается или уменьшается, чтобы целиком заполнить заданную область с сохранением пропорций.*/
+    }
+
+    .news__content {
+        width: 100%;
+        position: absolute;
+        /*li news__item, чтобы этот текст не видела*/
+        bottom: 0;
+        /*если у родителя position: relative, то абсолютное позиционирование дочки определяет их положение от нижнего края родителя
+        Так он встаёт поверх картинки!*/
+        margin-bottom: 20px;
+        padding: 0 20px;
+        color: #fff;
+    }
+
+    .news__data {
+        padding-bottom: 12px;
+        padding-left: 9px;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .news__subtitle {
+        font-size: 24px;
+        font-weight: 700;
+        padding-left: 7px;
+        padding-bottom: 3px;
+    }
+
+    .news__text {
+        padding-bottom: 17px;
+        padding-left: 11px;
+    }
+
+    .paginator {
+        text-align: center;
+        margin-top: 41px;
+        margin-left: 22px;
+    }
+
+    .paginator--theme--dark {
+        color: #000;
+    }
+
+    .paginator--theme--dark .paginator__link {
+        color: #000;
+        background: #fff;
+    }
+
+/*Модификатор активной кнопки открытого окна - active*/
+    .paginator__item--active .paginator__link{
+        color: #fff;
+        background: red;
+    }
+
+    .paginator--theme--dark .paginator__link:hover {
+        color: #fff;
+        background: red;
+    }
+
+    .paginator__display, .paginator__list, .paginator__item {
+        display: inline-block;
+    }
+
+    .paginator__link {
+        height: 32px;
+        width: 32px;
+        background: transparent;
+        border-radius: 50%;
+        display: inline-block;
+        color: #fff;
+        line-height: 32px;
+        /*межсточный интервал*/
+        transition: 0.4s;
+    }
+
+    /* при наведении мыши активирется */
+
+    .paginator__link:hover {
+        color: red;
+        background-color: #fff;
+    }
+
+
+
+    .about__content {
+        background: url("./photo/mountains.png") center no-repeat;
+        /*куратор */
+        display: inline-block;
+        color: #fff;
+        margin-left: -134px;
+        margin-top: 241px;
+        border-radius: 5px;
+        padding: 70px 202px 66px 81px;;
+        width: 785px;
+        height: 455px;
+    }
+
+    .about__title {
+        width: 103px;
+        height: 49px;
+        font-size: 36px;
+        font-weight: 700;
+    }
+
+    .about__text {
+        font-size: 16px;
+        min-height: 135px;
+        min-width: 502px;
+        margin-bottom: 80px;
+        padding-top: 37px;
+    }
+
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        padding-top: 38px;
+        margin-top: 54px;
+        border-top: 4px solid #1a3038;
+        /*по проекту FFFFFF, но больше на такой похоже rgb(48 48 48)*/
+        min-height: 93px;
+    }
+    .footer__col {
+        display: flex;
+        align-items: center;
+    }
+
+    .footer__col--align--right {
+        justify-content: flex-end;
+    }
+
+    .social__content {
+        display: inline-block;
+    }
+
+
+    .social__list {
+        margin-left: 231px;
+    }
+
+    .social__link {
+        padding-left: 42px;
+        border-radius: 50%;
+        position: relative;
+    }
+
+    .social__link:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: -8px;
+        left: 3px;
+        transform: translate(-50% -50%);
+        width: 36px; height: 36px;
+    }
+    .social__link:hover:before {
+        opacity: 1;
+    }
+    .social__link:hover:after {
+        opacity: 0;
+    }
+    .social__link:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: -8px;
+        left: 3px;
+        transform: translate(-50% -50%);
+        width: 36px; height: 36px;
+        opacity: 0;
+    }
+    .social__link--tele:after {
+        background: url(./social/sprites/tele.png) -10px -10px;
+    }
+    .social__link--tele:before {
+        background: url(./social/sprites/tele.png) -66px -10px;
+    }
+
+    .social__link--vk:after {
+        background: url(./social/sprites/vk.png) -10px -10px;
+    }
+    .social__link--vk:before {
+        background: url(./social/sprites/vk.png) -66px -10px;
+    }
+
+    .social__link--f:after {
+        background: url(./social/sprites/f.png) -10px -10px;
+    }
+    .social__link--f:before {
+        background: url(./social/sprites/f.png) -66px -10px;
+    }
+
+    .social__link--in:after {
+        background: url(./social/sprites/in.png) -10px -10px;
+    }
+    .social__link--in:before {
+        background: url(./social/sprites/in.png) -66px -10px;
+    }
+    
+    
+    /* .icon:after { 
+        content: "";
+        display: block;
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        transform: translate(7%, 6%);
+        width: 36px; 
+        height: 36px;
+        background: url('./sprites./css_sprites.png') -10px -10px;
+        transition: .3s;
+     }
+
+    /*смотрит на родителя и не обращает внимания на хедар*/
+
+    .footer .contacts__graf {
+        text-decoration: none;
+        font-size: 11px;
+    }
+
+    /* Serviseces Page */
+
+    .top-line {
+        min-height: 412px;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 25px;
+        background: #01131D url(./photo/elephant-services.png) center top no-repeat;
+    }
+
+    .top-line__container {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .header {
+        margin-top: -21px;
+        min-height: 123px;
+        -webkit-box-pack: justify;
+    } 
+
+    .container {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .container .workbox {
+        display: -webkit-box;
+    }
+
+    .breadcrumbs__item {
+        text-decoration: underline;
+    }
+
+    .page-title {
+        font-size: 72px;
+        line-height: 1;
+        font-weight: 700;
+        margin-bottom: 101px
+    }
+
+    .breadcrumbs__list {
+        display: flex;
+        align-items: center;
+    }
+
+    .breadcrumbs__item {
+        display: flex;
+        align-items: center;
+    }
+
+    .breadcrumbs__item--active .breadcrumbs__link {
+        color: rgb(214, 26, 26);
+    }
+
+    .breadcrumbs__item:after {
+        content: "/";
+        padding: 0 1px 0 1px;
+    }
+
+    .breadcrumbs__item:last-child:after {
+        display: none;
+    }
+
+    .breadcrumbs__link {
+        font-size: 14px;
+        font-weight: 400;
+
+    }
+
+    /*Блок предложений*/
+
+
+    .page-contenter {
+        background: #ffffff;
+        color: #303030;
+        padding: 98px 0 90px 0;
+    }
+
+    .service {
+        display: flex;
+        padding-bottom: 49px;
+    }
+
+    .services__item:last-child{
+        padding-bottom: 0px;
+    }
+
+    .service__img {
+        width: 30%;
+        margin-right: 7%;
+    }
+
+    .service__content {
+        flex: 1;
+    }
+
+    .service__title {
+        color: #000;
+        margin-bottom: 30px;
+        padding-top: 12px;
+    }
+
+    .service__desc{
+        line-height: 27px;
+        margin-bottom: 64px;
+    }
+
+    .services__content {
+        padding-left: 56px;
+    }
+
+    .paginator--theme--dark {
+        margin-top: 59px;
+    }
+
+    /*Блок партнёры*/
+
+    .inner-section {
+        background: #fff;
+        color: #1a1b1e;
+        padding: 60px 0 97px;;
+    }
+/*Модификатор цвета заливки блока "Партнёры" - может ещё пригодится, но с другим цветом*/
+.inner-section--bg--grey {
+    background: #f4f5f5;
+}
+
+.inner-section__title {
+    font-size: 48px;
+    margin-bottom: 61px;
+}
+.partner {
+    display: flex;
+    /*многосточный контейнер-вправо до конца*/
+    flex-wrap: wrap;
+    /*делаем выступ элементов блока за границы блока*/
+    /* margin-left: -20px; */
+}
+
+.partner__item {
+    margin-left: 20px;
+}
+
+
+/*указываем фиксированное количество элементов в строке*/
+.partner__item:nth-child(4n+1) { 
+    margin-left: 0;
+} 
+
+.partner__link {
+    text-decoration: none;
+    display: flex;
+    width: 270px;
+    height: 130px;
+    align-items: center;
+    justify-content: space-between;
+    /*обесцветили логотипы*/
+    filter: grayscale(100%);
+}
+
+.partner__link--partner {
+    min-width: 100%;
+}
+
+.partner__link:hover {
+    filter: grayscale(0);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding-top: 38px;
+    min-height: 93px;
+}
+
+
+
+/* reviews page */
+
+.reviews {
+    /*указываем необходимое кол. колонок*/
+    column-count: 2;
+    /*отступ между колонками*/
+    column-gap: 27px;
+    margin-bottom: 4px;
+}
+
+.review__item {
+    margin-bottom: 20px;
+}
+
+.review {
+    display:inline-flex;
+    flex-direction: column;
+    padding: 50px 28px;
+    background: #F4F5F5;
+    margin-bottom: 17px;
+}
+
+
+.avatar {
+    width: 142px;
+    height: 142px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.review__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.review__user {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #2e77a4;
+    margin-bottom: 11px;
+    padding-left: 19px;
+}
+
+.review__user::after {
+    content: url(./photo/avatar/vk-blue\ 1.png);
+    height: 30px;
+    padding-left: 13px;
+}
+
+.review__tags {
+    display: flex;
+    align-items: flex-start;
+}
+
+.tag {
+    font-size: 13px;
+    color: #333;
+    padding: 8px 16px;
+    border-radius: 50px;
+    background: #E7E7E7;
+}
+
+.tag--bg--green {
+    background: #B9EAE4;
+}
+
+.review__title {
+    font-size: 30px;
+    color: #1A1B1E;
+    font-weight: bold;
+    margin-bottom: 23px;
+}
+
+.review__content-text {
+    margin-bottom: 47px;
+}
+
+.review__date {
+    font-size: 14px;
+    color: #1A1B1E;
+    font-weight: bold;
+}
+
+/*separator*/
+
+.separator {
+    background: url("./photo/Rectangle.png") center no-repeat;
+    min-height: 363px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.separator__content {
+    display: flex;
+    justify-content: space-between;
+    /*max-width: 50%;*/
+}
+
+.separator__title {
+    display: flex;
+    align-items: center;
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 1.1;
+    max-width: 50%;
+}
+
+.separator__photo { 
+    margin-top: 21px;
+    padding-right: 32px;
+}
+
+/*section оставьте отзыв*/
+
+.form__row {
+    display: flex;
+    margin-bottom: 32px;
+}
+
+.form__input {
+    flex: 1px;
+    margin-right: 28px;
+    border-radius: 5px;
+    /*т.к. по умолчанию у input он есть*/
+    border: none;
+    background: #fff;
+    padding: 19px 30px 21px;
+    font-size: 18px;
+    color: #1A1B1E;
+    outline: none;
+    border: 1px solid transparent;
+}
+
+.form__input:focus {
+    border: 1px solid #F5170E;
+}
+
+.form__input::placeholder {
+    color: #666666;
+}
+
+.form__input:last-child {
+    margin-right: 0;
+    color: #666;
+}
+
+.form__input--textarea {
+    height: 235px;
+} 
+
+.form__input--textarea::placeholder {
+    color: #666666;
+} 
+
+/* .form__input:focus {
+    border-color: red;
+} не работает!!!*/
+
+/*Какими услугами пользуетесь-form__controls?*/
+.form__controls {
+    display: flex;
+    margin-bottom: 17px;
+}
+
+.form__controls-title {
+    width: 35%;
+    font-size: 18px;
+    color: #1A1B1E;
+    margin-right: 70px;
+    letter-spacing: -0.037em;
+}
+
+.controls {
+    /*Растянем на всю ширину*/
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -7px;
+    margin-bottom: -9px;
+}
+
+.controls__item {
+    margin-right: 7px;
+    margin-bottom: 9px;
+}
+
+.controls__elem {
+    cursor: pointer;
+}
+
+.controls__chekbox:checked ~ .controls__tag {
+    background: #B9EAE4;
+}
+
+.controls__chekbox {
+    display: none;
+}
+
+.form__btns {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn--color--black {
+    background: #2B2B2B;
+}
+
+.btn--color--black:hover {
+    background: #8E8E8E;
+}
+
+.form__btn {
+    margin-right: 17px;
+}
+
+.form__btn:last-child {
+    margin-right: 0;
+}
+
+
+/* Welcome Page */
+
+.welcome {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;align-items: center;
+    justify-content: center;
+    background: url(./hello/bg.png) center bottom / cover no-repeat;
+}
+
+.central__photo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.central {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url(./hello/shades.png) bottom / cover no-repeat;
+    min-height: 248px;
+    min-width: 665px;
+    padding-top: 51px;
+}
+
+.central__text {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+/* animation */
+
+.central__photo {
+    opacity: 0;
+    animation: zoom .9s ease-in;
+    animation-fill-mode: forwards;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(.7);
+    }
+
+    20% {
+        transform: scale(1.15);
+    }
+
+    
+    40% {
+        transform: scale(.9);
+    }
+    
+    60% {
+        transform: scale(1.1);
+    }
+
+    80% {
+        transform: scale(.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
